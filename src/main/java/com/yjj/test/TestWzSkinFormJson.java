@@ -72,7 +72,7 @@ public class TestWzSkinFormJson {
 	public void getImg(String heroNo, String heroName, String heroTitle, String HeroSkin) {
 		String url = "http://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/111/111-bigskin-1.jpg";
 		int HeroSkinCount = 1;
-		if (HeroSkin.indexOf("|") > 0) {
+		if (null!=HeroSkin&&HeroSkin.indexOf("|") > 0) {
 			String[] split = HeroSkin.split("\\|");
 			HeroSkinCount = split.length;
 			for (int i = 0; i < HeroSkinCount; i++) {
