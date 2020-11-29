@@ -2,11 +2,6 @@ package com.yjj.class03;
 
 public class Code01_MergeSort {
 
-    public static void main(String[] args) {
-        
-        int[] arr={2,4,6,3};
-        mergeSort1(arr);
-    }
     
     // 递归方法实现
     public static void mergeSort1(int[] arr) {
@@ -22,12 +17,9 @@ public class Code01_MergeSort {
         if (L == R) { // base case
             return;
         }
-        int mid=L+((R-L)>>1); // mid = (L + R) / 2
-//        System.out.println("L="+L+" mid="+mid+" R="+R);
+        int mid=L+((R-L)>>1); // mid = L+((R-L) / 2)  // mid = (L + R) / 2
         process(arr,L,mid);
-//        System.out.println("L="+L+" mid="+mid+" R="+R);
         process(arr,mid+1,R);
-//        System.out.println("L="+L+" mid="+mid+" R="+R);
         merge(arr, L, mid, R);
     }
     
@@ -155,7 +147,7 @@ public class Code01_MergeSort {
         }
 
         // for test
-        public static void main1(String[] args) {
+        public static void main(String[] args) {
             int testTime = 500000;
             int maxSize = 100;
             int maxValue = 100;
@@ -174,6 +166,14 @@ public class Code01_MergeSort {
             }
             System.out.println(succeed ? "Nice!" : "Oops!");
         }
+        
+        public static void maintest(String[] args) {
+            int[] arr={4,2,6,3};
+            mergeSort1(arr);
+        }
+        
+        
+        
     
     
 }
